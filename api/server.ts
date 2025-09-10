@@ -53,17 +53,6 @@ const handler = createMcpHandler((server) => {
       text: `垆边人似月，皓腕凝霜雪`
     }],
   }));
-
-  // 工具6: 加法操作
-  server.tool("add", {
-    a: z.number(),
-    b: z.number()
-  }, async ({ a, b }) => ({
-    content: [{
-      type: "text",
-      text: `Result: ${a + b}`
-    }],
-  }));
 });
 
 export { handler as GET, handler as POST, handler as DELETE };
